@@ -9,60 +9,42 @@
 #include <string.h>
 #include <math.h>
 
-/**
-// Function to swap elements
-void swap(double *a, double *b){
-    double t = *a;
-    *a = *b;
-    *b = t;
-}
+typedef double data_type; // データの型
+typedef struct node_tag {
+    data_type data; // データ
+    struct node_tag *next; // 次のノードへのポインタ
+} node_type;
 
-// Function to find the partition position
-int partition(double arr[], int low, int high){
-    double pivot = fabs(arr[high]); // Use absolute value for pivot
-    int i = (low - 1);
-    
-    // Traverse each element of the array and compare them with the pivot
-    for (int j = low; j < high; j++){
-        if (fabs(arr[j]) < fabs(pivot)){
-            // If element is smaller than pivot is found, swap it with the greater element pointed by i
-            i++;
-            swap(&arr[i], &arr[j]);
-        }
-    }
-    // Swap the pivot element with the greater element
-    swap(&arr[i+1], &arr[high]);
-    return (i+1);
-}
-
-// Quick Sort function
-void quickSort(double arr[], int low, int high){
-    if (low < high){
-        int pi = partition(arr, low, high);
-        quickSort(arr, low, pi-1);
-        quickSort(arr, pi+1, high);
+void printList(node_type *head){
+    node_type *current = head;
+    while(current != NULL){
+        printf("%lf", current->data);
+        if (current -> next != NULL)
+            printf(" -> ");
+        else
+            printf("\n");
+        current = current->next;
     }
 }
-
-**/
 
 int main(){
     FILE *fptr;
-    int n = 21;
-    double myArray[21] = {0.0};
     double sum = 0.0;
+    
+    node_type *head = NULL;
     fptr = fopen("input.txt", "r");
 
-    for(int i = 0; i < 21; i++){
-        fscanf(fptr, "%lf", &myArray[i]);
+    data_type num;
+    while(fscanf(fptr, "%lf", &num) != EOF){
+        node_type *new_node = (node_type *)malloc(sizeof(node_type));
+        new_node->data = num;
+        new_node->next = head;
+        head = new_node;
+        sum += num;
     }
 
-    //quickSort(myArray, 0, n-1);
+    printList(head);
 
-    for(int i = 0; i < n; i++){
-        printf("%lf\n", myArray[i]);
-        sum += myArray[i];
-    } 
     fclose(fptr);
     printf("The sum of the numbers is: %lf\n", sum);
     return 0;
