@@ -1,3 +1,8 @@
+// プログラミング言語実験・C 言語 第1回課題レポート
+// 学籍番号：2210745
+// 氏名：LEORA DAVID
+// 第１回課題・課題２
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -5,7 +10,6 @@
 
 typedef char firstName[50];
 typedef char lastName[50];
-// Define the Node structure
 typedef struct name_tag {
     firstName firstName;
     lastName lastName;
@@ -27,7 +31,7 @@ int main(){
     while(fscanf(fptr, "%49s %49s", first, last) == 2){
         name_tag *newNode = (name_tag *)malloc(sizeof(name_tag));
         if (newNode == NULL) {
-            printf("Unable to allocated memory\n");
+            printf("Unable to allocate memory\n");
             return -1;
         }
         strcpy(newNode->firstName, first);
@@ -47,17 +51,61 @@ int main(){
         }
     }
     fclose(fptr);
-
+    printf("線形リストの各要素が Last Name の辞書順を先頭から順に出力する\n");
+    printf("--------------------------------------------------------\n");
     temp = head;
     while(temp != NULL){
-        printf("名前: %10s, 苗字: %10s\n", temp->firstName, temp->lastName);
+        printf("苗字: %10s, 名前: %10s\n", temp->lastName, temp->firstName);
+        temp = temp->next;
+    }
+    printf("\n");
+
+    name_tag *headOfFirstName = NULL, *temp2 = NULL;
+
+    temp = head;
+    while (temp != NULL) {
+        name_tag *newNode = (name_tag *)malloc(sizeof(name_tag));
+        if (newNode == NULL) {
+            printf("Unable to allocate memory\n");
+            return -1;
+        }
+        strcpy(newNode->firstName, temp->firstName);
+        strcpy(newNode->lastName, temp->lastName);
+        newNode->next = NULL;
+        if(headOfFirstName == NULL || strcmp(newNode->firstName, headOfFirstName->firstName) < 0){
+            newNode->next = headOfFirstName;
+            headOfFirstName = newNode;
+        } else {
+            temp2 = headOfFirstName;
+            while (temp2->next != NULL && strcmp(newNode->firstName, temp2->next->firstName) > 0){
+                temp2 = temp2->next;
+            }
+            newNode->next = temp2->next;
+            temp2->next = newNode;
+        }
         temp = temp->next;
     }
 
-    while(head != NULL){
+    printf("線形リストの各要素が First Name の辞書順を先頭から順に出力する\n");
+    printf("--------------------------------------------------------\n");
+    temp2 = headOfFirstName;
+    while(temp2 != NULL) {
+        printf("名前: %10s, 苗字: %10s\n", temp2->firstName, temp2->lastName);
+        temp2 = temp2->next;
+    }
+
+    // Free memory at last part
+    while (head != NULL) {
         temp = head;
         head = head->next;
         free(temp);
     }
+
+    while(headOfFirstName != NULL){
+        temp2 = headOfFirstName;
+        headOfFirstName = headOfFirstName->next;
+        free(temp2);
+    }
+
     return 0;
 }
