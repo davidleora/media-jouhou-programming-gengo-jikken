@@ -34,13 +34,15 @@ int main(){
         strcpy(newNode->lastName, last);
         newNode->next = NULL;
 
-        if(head == NULL){
+        if(head == NULL || strcmp(newNode->lastName, head->lastName) < 0){
+            newNode->next = head;
             head = newNode;
         } else {
             temp = head;
-            while(temp->next != NULL){
+            while(temp->next != NULL && strcmp(newNode->lastName, temp->next->lastName) > 0){
                 temp = temp->next;
             }
+            newNode->next = temp->next;
             temp->next = newNode;
         }
     }
@@ -48,7 +50,7 @@ int main(){
 
     temp = head;
     while(temp != NULL){
-        printf("名前: %s, 苗字: %s\n", temp->firstName, temp->lastName);
+        printf("名前: %10s, 苗字: %10s\n", temp->firstName, temp->lastName);
         temp = temp->next;
     }
 
