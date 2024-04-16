@@ -1,9 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <math.h>
 
-#define SIZE 256
+#define SIZE 100
 #define TRUE 1
 #define FALSE 0
 #define SUCCESS 1
@@ -15,71 +14,50 @@ typedef struct node_tag {
     struct node_tag *next;
 } node_type;
 
-node_type *new_node(data_type x, node_type *p) {
-    node_type *temp;
-    temp = (node_type *)malloc(sizeof(node_type));
-    if (temp == NULL) return NULL;
-    temp->data = x;
-    temp->next = p;
-    return temp;
-}
-
 void initialize(node_type **pp){
     *pp = NULL;
 }
 
-void printList(node_type *head){
-    node_type *current = head;
-    while(current != NULL){
-        printf("%c", current->data);
-        if (current -> next != NULL)
-            printf(" ");
-        else
-            printf("\n");
-        current = current->next;
-    }
+int is_empty(node_type *p){
+    return (p == NULL) ? TRUE : FALSE;
 }
 
-int is_empty(node_type *p){
-    if (p == NULL) return TRUE;
-    else return FALSE;
+data_type top(node_type *p){
+    if (is_empty(p)){
+        printf("スタックは空です\n");
+        return '\0';
+    }
+    return p->data;
+}
+
+node_type *new_node(data_type x, node_type *next) {
+    node_type *temp = (node_type *)malloc(sizeof(node_type));
+    if (temp != NULL) {
+        temp->data = x;
+        temp->next = next;
+    }
+    return temp;
 }
 
 int push(data_type x, node_type **pp){
-    node_type *temp;
-    temp = new_node(x, *pp);
-    if (temp != NULL){
-        *pp = temp;
-        printList(*pp);
-        return SUCCESS;
-    } else {
-        return FAILURE;
-    }
+    node_type *temp = new_node(x, *pp);
+    if (temp == NULL) return FAILURE;
+    *pp = temp;
+    return SUCCESS;
 }
 
 int pop(node_type **pp)
 {
     node_type *temp;
 
-    if (*pp != NULL){
+    if (!is_empty(*pp)){
         temp = (*pp)->next;
         free(*pp);
         *pp = temp;
-        printList(*pp);
         return SUCCESS;
-    } else {
-        return FAILURE;
     }
+    return FAILURE;
 }
-
-data_type top(node_type *p){
-    if (p == NULL){
-        if (p == NULL) return '\0';
-        else return p->data;
-    }
-}
-
-node_type *stack;
 
 int checkPriority(char a){
     int priority;
@@ -104,21 +82,38 @@ int checkPriority(char a){
 }
 
 int main(){
-    char str[SIZE];
-    scanf("%s", str);
-    int i = 0;
-    int priority;
+    node_type *stack;
+    initialize(&stack);
+    char input[SIZE];
+    int track = 0;
+    scanf("%s", input);
 
-    while (i <= strlen(str)){
-        while (stack != NULL && top(stack) != '(' && (checkPriority(str[i]) <=  checkPriority(top(stack)))){
-            printf("%c", top(stack));
+    while (track < strlen(input) && input[track] != '\0'){
+        while(!is_empty(stack) && top(stack) != '(' && checkPriority(input[track]) <= checkPriority(top(stack))) {
+            if(top(stack) != '\0') 
+                printf("%c", top(stack));
             pop(&stack);
         }
-        {
-            /* code */
+        if (input[track] != ')') {
+            push(input[track], &stack);
+        } else {
+            while (!is_empty(stack) && top(stack) != '('){
+                printf("%c", top(stack));
+                pop(&stack);
+            }
+            if (!is_empty(stack) && top(stack) == '(') {
+                pop(&stack);
+            }
         }
-        
+        track++;
     }
 
+    while(!is_empty(stack)){
+        if(top(stack) != '\0') {
+            printf("%c", top(stack));
+        }
+        pop(&stack);
+    }
+    printf("\n");
     return 0;
 }
