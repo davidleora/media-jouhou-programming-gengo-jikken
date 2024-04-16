@@ -68,7 +68,9 @@ int insert (data_type x, node_type **pp) {
 void print_in_order(node_type *p) {
     if(p != NULL) {
         print_in_order(p->left);
-        printf("%d(%d) ", p->data, p->freq);
+        for (int i = 0; i < p->freq; i++){
+            printf("%d ", p->data);
+        }
         print_in_order(p->right);
     }
 }
