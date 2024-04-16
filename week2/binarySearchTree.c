@@ -65,6 +65,12 @@ int insert (data_type x, node_type **pp) {
     }
 }
 
+/** 未実装：データの削除（予定）
+int delete (data_type x, node_type **pp) {
+
+}
+**/
+
 void print_in_order(node_type *p) {
     if(p != NULL) {
         print_in_order(p->left);
@@ -72,6 +78,15 @@ void print_in_order(node_type *p) {
             printf("%d ", p->data);
         }
         print_in_order(p->right);
+    }
+}
+
+// プログラム終了時に、動的に割り当てたメモリを開放する処理
+void free_tree(node_type *p) {
+    if (p != NULL) {
+        free_tree(p->left);
+        free_tree(p->right);
+        free(p);
     }
 }
 
@@ -93,6 +108,7 @@ int main(){
             printf("挿入が失敗しました\n");
         }
     }
+    free_tree(root);
     printf("プログラムを終了します。\n");
     return 0;
 }
