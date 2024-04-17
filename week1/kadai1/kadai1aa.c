@@ -7,7 +7,7 @@ int main(){
     int n = 21;
     double myArray[21] = {0.0};
     double sum = 0.0;
-    fptr = fopen("input2.txt", "r");
+    fptr = fopen("input2.txt", "r"); // ファイルを読み込む
 
     for(int i = 0; i < 21; i++){
         fscanf(fptr, "%lf", &myArray[i]);
@@ -21,6 +21,6 @@ int main(){
     }
     printf("-------------------------- + \n");
     fclose(fptr);
-    printf("Sum: %lf\n", sum);
+    printf("Sum: %lf\n", sum); // 合計を出力
     return 0;
 }

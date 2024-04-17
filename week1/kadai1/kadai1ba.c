@@ -4,6 +4,8 @@
 #include <math.h>
 
 typedef double data_type;
+
+// ノードの構造体
 typedef struct node_tag {
     data_type data; // データ
     struct node_tag *next;
@@ -26,7 +28,7 @@ int main(){
     double sum = 0.0;
     
     node_type *head = NULL;
-    fptr = fopen("input.txt", "r");
+    fptr = fopen("input2.txt", "r");
 
     data_type num;
     while(fscanf(fptr, "%lf", &num) != EOF){

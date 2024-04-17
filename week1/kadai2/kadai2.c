@@ -14,7 +14,7 @@ typedef struct name_tag {
 
 int main(){
     FILE *fptr;
-    fptr = fopen("input.txt", "r");
+    fptr = fopen("input2.txt", "r");
     if (fptr == NULL) {
         printf("Unable to open file\n");
         return -1;
@@ -86,7 +86,7 @@ int main(){
     printf("--------------------------------------------------------\n");
     temp2 = headOfFirstName;
     while(temp2 != NULL) {
-        printf("名前: %10s, 苗字: %10s\n", temp2->firstName, temp2->lastName);
+        printf("苗字: %10s, 名前: %10s\n", temp2->lastName, temp2->firstName);
         temp2 = temp2->next;
     }
 

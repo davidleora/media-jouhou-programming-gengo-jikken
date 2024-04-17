@@ -3,12 +3,14 @@
 #include <string.h>
 #include <math.h>
 
+// ２つの要素を入れ替える関数
 void swap(double *a, double *b){
     double t = *a;
     *a = *b;
     *b = t;
 }
 
+// クイックソートのパーティション関数
 int partition(double arr[], int low, int high){
     double pivot = fabs(arr[high]);
     int i = (low - 1);
@@ -23,6 +25,7 @@ int partition(double arr[], int low, int high){
     return (i+1);
 }
 
+// クイックソート関数
 void quickSort(double arr[], int low, int high){
     if (low < high){
         int pi = partition(arr, low, high);
@@ -36,10 +39,10 @@ int main(){
     int n = 21;
     double myArray[21] = {0.0};
     double sum = 0.0;
-    fptr = fopen("input1.txt", "r");
+    fptr = fopen("input2.txt", "r"); // ファイルを読み込む
 
     for(int i = 0; i < 21; i++){
-        fscanf(fptr, "%lf", &myArray[i]);
+        fscanf(fptr, "%lf", &myArray[i]); // ファイルから数字を読み込む
     }
 
     quickSort(myArray, 0, n-1);
@@ -47,11 +50,11 @@ int main(){
     printf("The numbers are:\n");
     printf("--------------------------\n");
     for(int i = 0; i < n; i++){
-        printf("%25lf\n", myArray[i]);
+        printf("%25lf\n", myArray[i]); // ソートされた数字を出力
         sum += myArray[i];
     }
     printf("-------------------------- + \n");
     fclose(fptr);
-    printf("Sum: %lf\n", sum);
+    printf("Sum: %lf\n", sum); // 合計を出力
     return 0;
 }

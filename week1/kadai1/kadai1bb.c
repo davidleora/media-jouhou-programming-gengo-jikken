@@ -38,7 +38,7 @@ int main(){
     double sum = 0.0;
     
     node_type *head = NULL;
-    fptr = fopen("input.txt", "r");
+    fptr = fopen("input2.txt", "r");
 
     data_type num;
     while(fscanf(fptr, "%lf", &num) != EOF){
