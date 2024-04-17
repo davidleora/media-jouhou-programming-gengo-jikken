@@ -1,20 +1,12 @@
-// プログラミング言語実験・C 言語 第1回課題レポート
-// 学籍番号：2210745
-// 氏名：LEORA DAVID
-// 第１回課題・課題１B・b
-
-// データの個数が未知の場合、データとしてポインタによる線形リスト。
-// B.b は、データ入力後、絶対値に関して昇順に並べ替えたあとで総和を求めるプログラムである。
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-typedef double data_type; // データの型
+typedef double data_type;
 typedef struct node_tag {
-    data_type data; // データ
-    struct node_tag *next; // 次のノードへのポインタ
+    data_type data;
+    struct node_tag *next;
 } node_type;
 
 void printList(node_type *head, double sum){
@@ -57,11 +49,9 @@ int main(){
         pos = search_position(num, head);
 
         if (pos == 0 || head == NULL){
-            // Insert at the beginning of the list
             new_node->next = head;
             head = new_node;
         } else {
-            // Insert at the correct position
             node_type *current = head;
             for(int i=0; i < pos-1 && current->next != NULL; i++){
                 current = current->next;
@@ -70,7 +60,6 @@ int main(){
             current->next = new_node;
         }
     }
-
     printList(head, sum);
     fclose(fptr);
     return 0;

@@ -7,7 +7,7 @@ int main(){
     int n = 21;
     double myArray[21] = {0.0};
     double sum = 0.0;
-    fptr = fopen("input.txt", "r");
+    fptr = fopen("input2.txt", "r");
 
     for(int i = 0; i < 21; i++){
         fscanf(fptr, "%lf", &myArray[i]);
