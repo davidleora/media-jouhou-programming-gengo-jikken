@@ -1,8 +1,3 @@
-// プログラミング言語実験・C 言語 第1回課題レポート
-// 学籍番号：2210745
-// 氏名：LEORA DAVID
-// 第１回課題・課題２
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -10,6 +5,7 @@
 
 typedef char firstName[50];
 typedef char lastName[50];
+
 typedef struct name_tag {
     firstName firstName;
     lastName lastName;
@@ -94,7 +90,6 @@ int main(){
         temp2 = temp2->next;
     }
 
-    // Free memory at last part
     while (head != NULL) {
         temp = head;
         head = head->next;

@@ -1,20 +1,12 @@
-// プログラミング言語実験・C 言語 第1回課題レポート
-// 学籍番号：2210745
-// 氏名：LEORA DAVID
-// 第１回課題・課題１B・a
-
-// データの個数が未知の場合、データとしてポインタによる線形リスト。
-// B.a は、データの入力順に総和を求める。
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-typedef double data_type; // データの型
+typedef double data_type;
 typedef struct node_tag {
     data_type data; // データ
-    struct node_tag *next; // 次のノードへのポインタ
+    struct node_tag *next;
 } node_type;
 
 void printList(node_type *head){
@@ -46,7 +38,6 @@ int main(){
     }
 
     printList(head);
-
     fclose(fptr);
     printf("The sum of the numbers is: %lf\n", sum);
     return 0;

@@ -1,11 +1,3 @@
-// プログラミング言語実験・C 言語 第1回課題レポート
-// 学籍番号：2210745
-// 氏名：LEORA DAVID
-// 第１回課題・課題１A・a
-
-// データの個数が既知の場合、データとしてリスト構造をもたない、単なる配列を使用する。
-// A.a は、データの入力順に総和を求めるプログラムである。
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -22,10 +14,13 @@ int main(){
         sum += myArray[i];
     }
     
-    for(int i = 0; i < 21; i++){
-        printf("%lf\n", myArray[i]);
+    printf("The numbers are:\n");
+    printf("--------------------------\n");
+    for(int i = 0; i < n; i++){
+        printf("%25lf\n", myArray[i]);
     }
+    printf("-------------------------- + \n");
     fclose(fptr);
-    printf("The sum of the numbers is: %lf\n", sum);
+    printf("Sum: %lf\n", sum);
     return 0;
 }
