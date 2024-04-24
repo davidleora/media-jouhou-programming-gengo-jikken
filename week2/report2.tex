@@ -1,7 +1,7 @@
 \documentclass[]{jsarticle}
+
 \usepackage[dvipdfmx]{graphicx}
 \usepackage{comment}
-
 \usepackage{listings,jvlisting}
 \lstset{
   basicstyle={\ttfamily},
@@ -21,15 +21,269 @@
   numbersep=1zw,
   lineskip=-0.5ex,
 }
+\renewcommand{\lstlistingname}{ソースコード}
 
-\title{\vspace{-3cm} レポートタイトル}
-\author{I類 メディア情報学 LEORA DAVID\\\textbf{学籍番号}：2210745}
-\date{}
+\title{\vspace{-3cm} プログラミング言語実験・C言語　第２回課題レポート}
+\author{I類 メディア情報学 \\\textbf{氏名：}LEORA DAVID\\\textbf{学籍番号：}2210745}
+\date{2024年04月24日}
 
 \begin{document}
 \maketitle
+\section*{課題３（逆ポーランド記法）}
+被演算数、演算子、および括弧のトークンで構成された中置記法の算術式を読み込み、スタックを用いて逆ポーランド記法の式を出力するCプログラムを作成した。
+それから、次の（１）〜（３）の中置記法の算術式に対する実行結果を求めた。\\
+\hspace*{1cm}(1) A = ( B - C / D + E ) * F\\
+\hspace*{1cm}(2) A = B - ( C / D + E ) * F\\
+\hspace*{1cm}(3) A = B - C / ( D + E * F )\\
+また、プログラム中で使用する演算子は、二項演算しの加算「+」、減算「-」、乗算「*」、除算「/」、および代入「=」だけに限定することにした。
+最後に、単項演算子の加減算を追加した。\\
 
-\section{タイトル}
+\begin{lstlisting}[caption={reversePolishNotation.c}]
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define SIZE 100
+#define TRUE 1
+#define FALSE 0
+#define SUCCESS 1
+#define FAILURE 0
+
+typedef char data_type;
+typedef struct node_tag {
+    data_type data;
+    struct node_tag *next;
+} node_type;
+
+void initialize(node_type **pp){
+    *pp = NULL;
+}
+
+int is_empty(node_type *p){
+    return (p == NULL) ? TRUE : FALSE;
+}
+
+data_type top(node_type *p){
+    if (is_empty(p)){
+        printf("スタックは空です\n");
+        return '\0';
+    }
+    return p->data;
+}
+
+node_type *new_node(data_type x, node_type *next) {
+    node_type *temp = (node_type *)malloc(sizeof(node_type));
+    if (temp != NULL) {
+        temp->data = x;
+        temp->next = next;
+    }
+    return temp;
+}
+
+int push(data_type x, node_type **pp){
+    node_type *temp = new_node(x, *pp);
+    if (temp == NULL) return FAILURE;
+    *pp = temp;
+    return SUCCESS;
+}
+
+int pop(node_type **pp)
+{
+    node_type *temp;
+
+    if (!is_empty(*pp)){
+        temp = (*pp)->next;
+        free(*pp);
+        *pp = temp;
+        return SUCCESS;
+    }
+    return FAILURE;
+}
+
+int checkPriority(char a){
+    int priority;
+    switch (a) {
+        case '=':
+            return 0;
+        case ')' :
+            return 1;
+        case '+' :
+            return 2;
+        case '-' :
+            return 2;
+        case '*' :
+            return 3;
+        case '/' : 
+            return 3;
+        case '(' : 
+            return 4;
+        default:
+            return 5;
+        }
+}
+
+int main(){
+    node_type *stack;
+    initialize(&stack);
+    char input[SIZE];
+    int track = 0;
+    scanf("%s", input);
+
+    while (track < strlen(input) && input[track] != '\0'){
+        while(!is_empty(stack) && top(stack) != '(' && checkPriority(input[track]) <= checkPriority(top(stack))) {
+            if(top(stack) != '\0') 
+                printf("%c", top(stack));
+            pop(&stack);
+        }
+        if (input[track] != ')') {
+            push(input[track], &stack);
+        } else {
+            while (!is_empty(stack) && top(stack) != '('){
+                printf("%c", top(stack));
+                pop(&stack);
+            }
+            if (!is_empty(stack) && top(stack) == '(') {
+                pop(&stack);
+            }
+        }
+        track++;
+    }
+
+    while(!is_empty(stack)){
+        if(top(stack) != '\0') {
+            printf("%c", top(stack));
+        }
+        pop(&stack);
+    }
+    printf("\n");
+    return 0;
+}
+\end{lstlisting}
+
+\section*{課題４（二分探索木）}
+入力として整数（int型）のデータが与えられ、これらのデータには同じ整数が重複して出現してもよいものとする。
+このとき、ポインタによる二分探索木を実現して、整数データを二分探索木に挿入した後、この二分探索木に挿入されたデータを取り出して、データを照準（厳密には非減少順）に出力するCのプログラムを作成した。
+ただし、同じ値の整数データが複数存在する場合には、入力時と同じ個数分出力することにした。\\
+\\ここで、ポインタによる二分探索木の実現に際して、各ノードは、整数データを保持する int 型変数 data と、その整数が出現した頻度（度数）を保持する int 型変数 frequency をもつものとする。
+最後に、データの削除も行えるように改良した。\\
+
+\begin{lstlisting}[caption={binarySearchTree.c}]
+#include <stdio.h>
+#include <stdlib.h>
+
+#define TRUE 1
+#define FALSE 0
+#define SUCCESS 1
+#define FAILURE 0
+
+typedef int data_type;
+typedef int freq_type;
+typedef struct node_tag {
+    data_type data;
+    freq_type freq;
+    struct node_tag *left;
+    struct node_tag *right;
+} node_type;
+
+void initialize(node_type **pp) {
+    *pp = NULL;
+}
+
+int is_member(data_type x, node_type *p) {
+    if (p == NULL) return FALSE;
+    else {
+        if(x == p->data) return TRUE;
+        else {
+            if (x < p->data) return is_member(x, p->left);
+            else return is_member(x, p->right);
+        }
+    }
+}
+
+data_type min(node_type *p) {
+    while (p->left != NULL) {
+        p = p->left;
+    }
+    return p->data;
+}
+
+node_type *new_node(data_type x) {
+    node_type *temp = (node_type *)malloc(sizeof(node_type));
+    if (temp == NULL) return NULL;
+    else {
+        temp -> data = x;
+        temp -> freq = 1;
+        temp -> left = NULL;
+        temp -> right = NULL;
+        return temp;
+    }
+}
+
+int insert (data_type x, node_type **pp) {
+    if (*pp == NULL) {
+        node_type *temp = new_node(x);
+        if (temp == NULL) return FAILURE;
+        *pp = temp;
+        return SUCCESS;
+    } else {
+        if (x < (*pp)->data) return insert (x, &((*pp)->left));
+        else if (x > (*pp)->data) return insert(x, &((*pp)->right));
+        else {
+            (*pp)->freq++;
+            return SUCCESS;
+        }
+    }
+}
+
+/** 未実装：データの削除（予定）
+int delete (data_type x, node_type **pp) {
+
+}
+**/
+
+void print_in_order(node_type *p) {
+    if(p != NULL) {
+        print_in_order(p->left);
+        for (int i = 0; i < p->freq; i++){
+            printf("%d ", p->data);
+        }
+        print_in_order(p->right);
+    }
+}
+
+// プログラム終了時に、動的に割り当てたメモリを開放する処理
+void free_tree(node_type *p) {
+    if (p != NULL) {
+        free_tree(p->left);
+        free_tree(p->right);
+        free(p);
+    }
+}
+
+int main(){
+    node_type *root;
+    initialize(&root);
+    int choice, x;
+
+    while(TRUE) {
+        printf("\n数値を入力してください（プログラム修了：－１）：");
+        scanf("%d", &x);
+        if (x == -1) break;
+        if (insert(x, &root) == SUCCESS) {
+            printf("挿入が成功しました\n");
+            printf("木の中身：");
+            print_in_order(root);
+            printf("\n");
+        } else {
+            printf("挿入が失敗しました\n");
+        }
+    }
+    free_tree(root);
+    printf("プログラムを終了します。\n");
+    return 0;
+}
+\end{lstlisting}
+
 
 
 \newpage
