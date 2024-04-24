@@ -65,11 +65,34 @@ int insert (data_type x, node_type **pp) {
     }
 }
 
-/** 未実装：データの削除（予定）
+// 未実装：データの削除（予定）
 int delete (data_type x, node_type **pp) {
-
+    if (*pp == NULL) return FAILURE;
+    else if (x < (*pp)->data) {
+        return delete(x, &((*pp)->left));
+    } else if (x > (*pp)->data) {
+        return delete(x, &((*pp)->right));
+    } else {
+        if ((*pp)->left == NULL && (*pp)->right == NULL) {
+            free(*pp);
+            *pp = NULL;
+            return SUCCESS;
+        } else if ((*pp)->left == NULL) {
+            node_type *temp = *pp;
+            *pp = (*pp)->right;
+            free(temp);
+            return SUCCESS;
+        } else if ((*pp)->right == NULL) {
+            node_type *temp = *pp;
+            *pp = (*pp)->left;
+            free(temp);
+            return SUCCESS;
+        } else {
+            (*pp)->data = min((*pp)->right);
+            return delete((*pp)->data, &((*pp)->right));
+        }
+    }
 }
-**/
 
 void print_in_order(node_type *p) {
     if(p != NULL) {
@@ -96,19 +119,43 @@ int main(){
     int choice, x;
 
     while(TRUE) {
-        printf("\n数値を入力してください（プログラム修了：－１）：");
-        scanf("%d", &x);
-        if (x == -1) break;
-        if (insert(x, &root) == SUCCESS) {
-            printf("挿入が成功しました\n");
-            printf("木の中身：");
-            print_in_order(root);
-            printf("\n");
-        } else {
-            printf("挿入が失敗しました\n");
+        printf("\n1. Insert\n2. Delete\n3. Exit\nEnter your choice: ");
+        scanf("%d", &choice);
+
+        switch(choice) {
+            case 1:
+                printf("Enter the number to insert: ");
+                scanf("%d", &x);
+                if (insert(x, &root) == SUCCESS) {
+                    printf("========================\nInsertion was successful\n");
+                    printf("Tree contents: \n");
+                    print_in_order(root);
+                    printf("\n========================\n");
+                } else {
+                    printf("Insertion failed\n");
+                }
+                break;
+            case 2:
+                printf("Enter the number to delete: ");
+                scanf("%d", &x);
+                int result = delete(x, &root);
+                if (delete(x, &root) == SUCCESS) {
+                    printf("========================\nDeletion was successful\n");
+                    printf("Tree contents: \n");
+                    print_in_order(root);
+                    printf("\n========================\n");
+                } else if (result == FAILURE) {
+                    printf("NUMBER NOT FOUND\n");
+                } else {
+                    printf("Deletion failed\n");
+                }
+                break;
+            case 3:
+                printf("========================\nExiting the program.\n========================\n");
+                free_tree(root);
+                return 0;
+            default:
+                printf("Invalid choice. Please enter 1, 2, or 3.\n");
         }
     }
-    free_tree(root);
-    printf("プログラムを終了します。\n");
-    return 0;
 }
