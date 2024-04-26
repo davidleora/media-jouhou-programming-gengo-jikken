@@ -86,9 +86,17 @@ int main(){
     initialize(&stack);
     char input[SIZE];
     int track = 0;
-    scanf("%s", input);
+
+    printf("式を入力してください：\n");
+    fgets(input, SIZE, stdin);
+    int len = strlen(input);
+    if(input[len-1] == '\n')
+        input[len-1] = '\0';
 
     while (track < strlen(input) && input[track] != '\0'){
+        if(input[track] == ' ')
+            track++;
+
         while(!is_empty(stack) && top(stack) != '(' && checkPriority(input[track]) <= checkPriority(top(stack))) {
             if(top(stack) != '\0') 
                 printf("%c", top(stack));
