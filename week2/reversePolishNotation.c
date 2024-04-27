@@ -116,7 +116,7 @@ int main() {
 
         if(isOperator(previousChar, input[track])){ // 単項演算子の判定を行います
             track++;
-            push('~', &stack);
+            push('-', &stack);
             push(input[track], &stack);
             previousChar = input[track]; // 前の文字を更新します
             track++;

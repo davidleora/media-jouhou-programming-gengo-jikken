@@ -136,7 +136,7 @@ int main(){
                 scanf("%d", &x);
                 if (insert(x, &root) == SUCCESS) {
                     printf("========================\nInsertion was successful\n");
-                    printf("Tree contents: \n");
+                    printf("Tree contents: ");
                     print_in_order(root);
                     printf("\n========================\n");
                 } else {
@@ -147,9 +147,9 @@ int main(){
                 printf("Enter the number to delete: ");
                 scanf("%d", &x);
                 int result = delete(x, &root);
-                if (delete(x, &root) == SUCCESS) {
+                if (result == SUCCESS) {
                     printf("========================\nDeletion was successful\n");
-                    printf("Tree contents: \n");
+                    printf("Tree contents: ");
                     print_in_order(root);
                     printf("\n========================\n");
                 } else if (result == FAILURE) {
