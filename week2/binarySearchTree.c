@@ -8,6 +8,8 @@
 
 typedef int data_type;
 typedef int freq_type;
+
+// ノードの構造を定義するための構造体です。
 typedef struct node_tag {
     data_type data;
     freq_type freq;
@@ -15,10 +17,12 @@ typedef struct node_tag {
     struct node_tag *right;
 } node_type;
 
+// 引数として与えられたノードのポインタをNULLに初期化します
 void initialize(node_type **pp) {
     *pp = NULL;
 }
 
+// 指定された値が二分探索木に存在するかどうかを判定します
 int is_member(data_type x, node_type *p) {
     if (p == NULL) return FALSE;
     else {
@@ -30,6 +34,7 @@ int is_member(data_type x, node_type *p) {
     }
 }
 
+// 与えられたノードの中で最小の値を探します
 data_type min(node_type *p) {
     while (p->left != NULL) {
         p = p->left;
@@ -37,6 +42,7 @@ data_type min(node_type *p) {
     return p->data;
 }
 
+// 新しいノードを作成します
 node_type *new_node(data_type x) {
     node_type *temp = (node_type *)malloc(sizeof(node_type));
     if (temp == NULL) return NULL;
@@ -49,6 +55,7 @@ node_type *new_node(data_type x) {
     }
 }
 
+// 二分探索木にデータを挿入します
 int insert (data_type x, node_type **pp) {
     if (*pp == NULL) {
         node_type *temp = new_node(x);
@@ -65,7 +72,7 @@ int insert (data_type x, node_type **pp) {
     }
 }
 
-// 未実装：データの削除（予定）
+// 二分探索木からデータを削除します
 int delete (data_type x, node_type **pp) {
     if (*pp == NULL) return FAILURE;
     else if (x < (*pp)->data) {
@@ -94,6 +101,7 @@ int delete (data_type x, node_type **pp) {
     }
 }
 
+// 二分探索木を中順で出力します
 void print_in_order(node_type *p) {
     if(p != NULL) {
         print_in_order(p->left);
