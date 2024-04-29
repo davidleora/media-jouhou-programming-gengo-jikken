@@ -1,11 +1,11 @@
 # Fdb version 4
-["dvipdf"] 1714400544 "out/report2.dvi" "out/report2.pdf" "out/report2" 1714400544 0
-  "out/report2.dvi" 1714400544 42772 2d8af35aa3d06e5d4f54841e1a87179e "latex"
+["dvipdf"] 1714402141 "out/report2.dvi" "out/report2.pdf" "out/report2" 1714402141 0
+  "out/report2.dvi" 1714402141 42772 606ec821e0ab54db723d17040fac5d0a "latex"
   (generated)
   "out/report2.pdf"
   (rewritten before read)
-["latex"] 1714400543 "/Users/davidleora/Projects/media-jouhou-programming-gengo-jikken/week3/report2.tex" "out/report2.dvi" "report2" 1714400544 0
-  "/Users/davidleora/Projects/media-jouhou-programming-gengo-jikken/week3/report2.tex" 1714400542 22719 bf5b4161df7ae8cfba4ac69922059f5f ""
+["latex"] 1714402140 "/Users/davidleora/Projects/media-jouhou-programming-gengo-jikken/week3/report2.tex" "out/report2.dvi" "report2" 1714402141 0
+  "/Users/davidleora/Projects/media-jouhou-programming-gengo-jikken/week3/report2.tex" 1714402110 22719 bf5b4161df7ae8cfba4ac69922059f5f ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/jis/jis.tfm" 1463434352 468 53f854284f6afa6c36aaa2d1090ecc12 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/jis/jisg.tfm" 1463434352 468 53f854284f6afa6c36aaa2d1090ecc12 ""
@@ -44,8 +44,8 @@
   "/usr/local/texlive/2023/texmf-dist/web2c/texmf.cnf" 1677365944 40745 87bb86a62d462f93a1efc6b0c65c872e ""
   "/usr/local/texlive/2023/texmf-var/web2c/eptex/platex.fmt" 1707965132 7883686 8a44d7f2e980ead229571286e8dd8e3d ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "out/report2.aux" 1714400544 275 5973a71f4046c418bfcdea04b6ae23d7 "latex"
-  "report2.tex" 1714400542 22719 bf5b4161df7ae8cfba4ac69922059f5f ""
+  "out/report2.aux" 1714402141 275 5973a71f4046c418bfcdea04b6ae23d7 "latex"
+  "report2.tex" 1714402110 22719 bf5b4161df7ae8cfba4ac69922059f5f ""
   (generated)
   "out/report2.aux"
   "out/report2.dvi"

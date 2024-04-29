@@ -154,9 +154,6 @@ INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
-INPUT out/report3.aux
-INPUT out/report3.aux
-INPUT out/report3.aux
 OUTPUT out/report3.aux
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin10.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/jis/jis.tfm
@@ -181,17 +178,3 @@ INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/standard/tgoth10.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/jis/jisg.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmss12.tfm
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin10.tfm
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/jis/jis.tfm
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/standard/tgoth10.tfm
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/jis/jisg.tfm
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin10.tfm
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/jis/jis.tfm
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/standard/tgoth10.tfm
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/jis/jisg.tfm
-OUTPUT out/report3.dvi
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/jis/jis.tfm
-INPUT out/report3.aux
