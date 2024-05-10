@@ -1,0 +1,101 @@
+\documentclass[]{jsarticle}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{comment}
+\usepackage{listings,jvlisting}
+\usepackage{verbatim}
+\usepackage{url}
+\usepackage[utf8]{inputenc}
+
+\lstset{
+  basicstyle={\ttfamily},
+  identifierstyle={\small},
+  commentstyle={\smallitshape},
+  keywordstyle={\small\bfseries},
+  ndkeywordstyle={\small},
+  stringstyle={\small\ttfamily},
+  frame={tb},
+  breaklines=true,
+  columns=[l]{fullflexible},
+  numbers=left,
+  xrightmargin=0zw,
+  xleftmargin=2zw,
+  numberstyle={\scriptsize},
+  stepnumber=1,
+  numbersep=1zw,
+  lineskip=-0.5ex,
+}
+\renewcommand{\lstlistingname}{ソースコード}
+\title{\vspace{-3cm} \textbf{プログラミング言語実験・C言語　第４回課題レポート}}
+\author{\textbf{I類 メディア情報学} \\\textbf{氏名：}LEORA DAVID\\\textbf{学籍番号：}2210745}
+\date{\textbf{2024年05月10日}}
+
+\begin{document}
+\maketitle
+
+\section*{課題７（階段出し機能の実装）}
+コンピュータ大貧民教育用クライアント（tndhmc-0.03.tar.gz）のディレクトリ src にある、 select\_cards.c などを改変し、
+階段出し機能を実現しなさい。
+この課題では、場にカードがない状況で、 かつ提出するカードにジョーカーを含まない場合について実装すること。
+
+実装が完了したら、大貧民サーバを立ち上げゲームを実行し、 階段出しが行われている様子がわかるスクリーンショットを取得すること
+（サーバの実行画面中のクライアントプログラム名が Normal と表示されているか、確認すること）。
+
+また、実現した階段出し機能について、以下の考察を行うこと。
+
+配列をどのように使って処理をしているか。
+該当するソースコードの記述によって何故その機能が実現できているのか。
+
+\section*{課題７の実行結果}
+
+
+\newpage
+\section*{課題８（場にカードが出ている場合に対するペア出し機能と階段出し機能の実装）}
+課題６および課題７のプログラムを改良し、 「場にカードが出ている場合」に対するペア出し機能と階段出し機能を実現しなさい。
+なお、提出するカードにジョーカーを含まない場合について実装すること。
+
+実装が完了したら、大貧民サーバを立ち上げゲームを実行し、 場にカードが出ている状態からペア出しや階段出しが行われている様子がわかる
+スクリーンショットを取得すること （サーバの実行画面中のクライアントプログラム名が Normal と表示されているか、確認すること）。
+
+また、実現したペア出し機能や階段出し機能について、以下の考察を行うこと。
+
+配列をどのように使って処理をしているか。
+該当するソースコードの記述によって何故その機能が実現できているのか。
+
+\section*{課題８の実行結果}
+
+\newpage
+\section*{課題９（ペアや階段として出せるカードの温存}
+コンピュータ大貧民教育用クライアント（tndhmc-0.03.tar.gz）のディレクトリ src にある、 daihinmin.c などを改変し、
+ペアや階段として出せるカードを温存する機能を実現しなさい。
+
+実装が完了したら、大貧民サーバを立ち上げゲームを実行し、 カードを温存している様子がわかるスクリーンショットを取得すること。
+
+また、実現したカードの温存機能について、以下の考察を行うこと。
+
+配列をどのように使って処理をしているか。
+該当するソースコードの記述によって何故その機能が実現できているのか。
+
+\section*{課題９の実行結果}
+
+\newpage
+\section*{課題１０（場が空の時のジョーカーを利用したペア}
+コンピュータ大貧民教育用クライアント（tndhmc-0.03.tar.gz）のディレクトリ src にある、 daihinmin.c などを改変し、
+場が空の時のジョーカーを利用したペア出し機能および階段出し機能を実現しなさい。
+
+実装が完了したら、大貧民サーバを立ち上げゲームを実行し、場が空のとき、 ジョーカーを利用したペア出しや階段出しが
+行われている様子がわかるスクリーンショットを取得すること。
+
+また、実現したペア出し機能や階段出し機能について、以下の考察を行うこと。
+
+配列をどのように使って処理をしているか。
+該当するソースコードの記述によって何故その機能が実現できているのか。
+
+\section*{課題１０の実行結果}
+
+\newpage
+\begin{thebibliography}{99}
+  \bibitem{cite1} 第３回　コンピュータ大貧民（大貧民の実行とペア出し機能の実装）, \\URL : \url{https://www.ied.inf.uec.ac.jp/text/laboratory/C/third_week/index03.html}
+\end{thebibliography}
+
+
+\end{document}

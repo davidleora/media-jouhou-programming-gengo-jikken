@@ -1,12 +1,13 @@
 # Fdb version 4
-["dvipdf"] 1714837836 "out/report3.dvi" "out/report3.pdf" "out/report3" 1714837837 0
-  "out/report3.dvi" 1714837836 6232 7640e7cad1d803a2f8f16f93d9d6e5e3 "latex"
+["dvipdf"] 1714917126 "out/report3.dvi" "out/report3.pdf" "out/report3" 1714917127 0
+  "out/report3.dvi" 1714917126 26684 ea3a4819d39a8974764e83e3c356de3a "latex"
   (generated)
   "out/report3.pdf"
   (rewritten before read)
-["latex"] 1714837835 "/Users/davidleora/Projects/media-jouhou-programming-gengo-jikken/week3/report3.tex" "out/report3.dvi" "report3" 1714837837 0
-  "/Users/davidleora/Projects/media-jouhou-programming-gengo-jikken/week3/report3.tex" 1714837835 4540 f1483bde96cc97d90537ff03a2545fac ""
+["latex"] 1714917126 "/Users/davidleora/Projects/media-jouhou-programming-gengo-jikken/week3/report3.tex" "out/report3.dvi" "report3" 1714917127 0
+  "/Users/davidleora/Projects/media-jouhou-programming-gengo-jikken/week3/report3.tex" 1714917125 14030 805251f7338ce6e18c151a8299b18405 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tctt0900.tfm" 1136768653 1536 bda3e6bf9784a4cc572c754e0c3eeb00 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/jis/jis.tfm" 1463434352 468 53f854284f6afa6c36aaa2d1090ecc12 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/jis/jisg.tfm" 1463434352 468 53f854284f6afa6c36aaa2d1090ecc12 ""
@@ -27,6 +28,7 @@
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1136768653 1116 933a60c408fc0a863a92debe84b2d294 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1136768653 1120 8b7d695260f3cff42e636090a8002094 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm" 1136768653 768 1321e9409b4137d6fb428ac9dc956269 ""
+  "/usr/local/texlive/2023/texmf-dist/tex/latex/base/inputenc.sty" 1654720880 5048 84b05796b49b69e2d4257d537721c960 ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/base/ts1cmtt.fd" 1667332637 2287 948a4376ad21a952b34faf55edab8f65 ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/comment/comment.sty" 1472166125 10197 204f75d5d8d88aa345a8c402e879e63b ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/graphics.cfg" 1465944070 1224 978390e9c2234eab29404bc21b268d1e ""
@@ -49,8 +51,10 @@
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
   "kadai5/1.png" 1713840485 436325 78e779bebc3b128cd5b37e1f0a051e34 ""
   "kadai5/2.png" 1713840495 20051 8a0ce1937ff74e9a5003121dbdf5f515 ""
-  "out/report3.aux" 1714837836 302 f01e7df1825775596bfb85c86d7243e7 "latex"
-  "report3.tex" 1714837835 4540 f1483bde96cc97d90537ff03a2545fac ""
+  "kadai6/1.jpg" 1714913643 805310 76680827e3413803a1197ee68cea1fd1 ""
+  "kadai6/double.png" 1713846130 363991 d022b3e2e2b4b6be5bc5d5d165c8e371 ""
+  "out/report3.aux" 1714917126 884 0f379a390f8fa09f22a217b969a0d5b8 "latex"
+  "report3.tex" 1714917125 14030 805251f7338ce6e18c151a8299b18405 ""
   (generated)
   "out/report3.aux"
   "out/report3.dvi"
