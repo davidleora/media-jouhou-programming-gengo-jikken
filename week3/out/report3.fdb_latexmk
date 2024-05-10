@@ -1,17 +1,18 @@
 # Fdb version 4
-["dvipdf"] 1714611617 "out/report3.dvi" "out/report3.pdf" "out/report3" 1714611618 0
-  "out/report3.dvi" 1714611617 4492 075240fbec8861b8cb4723cfb07e48d8 "latex"
+["dvipdf"] 1714837836 "out/report3.dvi" "out/report3.pdf" "out/report3" 1714837837 0
+  "out/report3.dvi" 1714837836 6232 7640e7cad1d803a2f8f16f93d9d6e5e3 "latex"
   (generated)
   "out/report3.pdf"
   (rewritten before read)
-["latex"] 1714611617 "/Users/davidleora/Projects/media-jouhou-programming-gengo-jikken/week3/report3.tex" "out/report3.dvi" "report3" 1714611618 0
-  "/Users/davidleora/Projects/media-jouhou-programming-gengo-jikken/week3/report3.tex" 1714611616 3409 14e33bf5a6bf791aeaea6d797a73dd91 ""
+["latex"] 1714837835 "/Users/davidleora/Projects/media-jouhou-programming-gengo-jikken/week3/report3.tex" "out/report3.dvi" "report3" 1714837837 0
+  "/Users/davidleora/Projects/media-jouhou-programming-gengo-jikken/week3/report3.tex" 1714837835 4540 f1483bde96cc97d90537ff03a2545fac ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tctt0900.tfm" 1136768653 1536 bda3e6bf9784a4cc572c754e0c3eeb00 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/jis/jis.tfm" 1463434352 468 53f854284f6afa6c36aaa2d1090ecc12 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/jis/jisg.tfm" 1463434352 468 53f854284f6afa6c36aaa2d1090ecc12 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/standard/tgoth10.tfm" 1463434352 856 7404843a5f798859944d7973a47821d5 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin10.tfm" 1463434352 856 39c171483fe1bb7d0e1368980c0c205b ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm" 1136768653 1512 f21f83efb36853c0b70002322c1ab3ad ""
@@ -20,6 +21,7 @@
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr17.tfm" 1136768653 1292 296a67155bdbfc32aa9c636f21e91433 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr6.tfm" 1136768653 1300 b62933e007d01cfd073f79b963c01526 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr8.tfm" 1136768653 1292 21c1c5bfeaebccffdb478fd231a0997d ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr9.tfm" 1136768653 1292 6b21b9c2c7bebb38aa2273f7ca0fb3af ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmss12.tfm" 1136768653 1324 37b971caf729d7edd9cbb9f9b0ea76eb ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1136768653 1124 6c73e740cf17375f03eec0ee63599741 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1136768653 1116 933a60c408fc0a863a92debe84b2d294 ""
@@ -46,8 +48,9 @@
   "/usr/local/texlive/2023/texmf-var/web2c/eptex/platex.fmt" 1707965132 7883686 8a44d7f2e980ead229571286e8dd8e3d ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
   "kadai5/1.png" 1713840485 436325 78e779bebc3b128cd5b37e1f0a051e34 ""
-  "out/report3.aux" 1714611617 51 136355023f599c323ecef2198025759a "latex"
-  "report3.tex" 1714611616 3409 14e33bf5a6bf791aeaea6d797a73dd91 ""
+  "kadai5/2.png" 1713840495 20051 8a0ce1937ff74e9a5003121dbdf5f515 ""
+  "out/report3.aux" 1714837836 302 f01e7df1825775596bfb85c86d7243e7 "latex"
+  "report3.tex" 1714837835 4540 f1483bde96cc97d90537ff03a2545fac ""
   (generated)
   "out/report3.aux"
   "out/report3.dvi"

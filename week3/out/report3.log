@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p4.1.0-230214-2.6 (utf8.euc) (TeX Live 2023) (preloaded format=platex 2024.2.15)  2 MAY 2024 10:00
+This is e-pTeX, Version 3.141592653-p4.1.0-230214-2.6 (utf8.euc) (TeX Live 2023) (preloaded format=platex 2024.2.15)  5 MAY 2024 00:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -188,28 +188,41 @@ File: ts1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
 File: kadai5/1.png Graphic file (type bmp)
 <kadai5/1.png>
+LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
+(Font)              scaled to size 8.64899pt on input line 55.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 8.64899pt on input line 55.
+File: kadai5/2.png Graphic file (type bmp)
+<kadai5/2.png>
 
-Overfull \hbox (9.24687pt too wide) in paragraph at lines 55--56
-[][] 
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 [1
 
-] [2] [3]
+]
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 77.
+LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
+(Font)              scaled to size 9.60999pt on input line 77.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 77.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 9.60999pt on input line 77.
+[2]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 75.
+(Font)              <7> on input line 89.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 75.
+(Font)              <5> on input line 89.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 4.805pt on input line 75.
-[4] (out/report3.aux) ) 
+(Font)              scaled to size 4.805pt on input line 89.
+[3] (out/report3.aux) ) 
 Here is how much of TeX's memory you used:
- 3046 strings out of 476693
- 46032 string characters out of 5805373
- 1866209 words of memory out of 5000000
- 23506 multiletter control sequences out of 15000+600000
- 523564 words of font info for 86 fonts, out of 8000000 for 9000
+ 3059 strings out of 476693
+ 46200 string characters out of 5805373
+ 1868209 words of memory out of 5000000
+ 23516 multiletter control sequences out of 15000+600000
+ 524452 words of font info for 90 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 55i,6n,62p,275b,1416s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 55i,6n,62p,297b,1416s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/report3.dvi (4 pages, 4492 bytes).
+Output written on out/report3.dvi (3 pages, 6232 bytes).

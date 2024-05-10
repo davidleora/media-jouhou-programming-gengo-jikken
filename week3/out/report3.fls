@@ -208,6 +208,14 @@ INPUT ./kadai5/1.png
 INPUT ./kadai5/1.png
 INPUT kadai5/1.png
 INPUT extractbb -B cropbox -O kadai5/1.png
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin10.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/jis/jis.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
+INPUT ./kadai5/2.png
+INPUT ./kadai5/2.png
+INPUT kadai5/2.png
+INPUT extractbb -B cropbox -O kadai5/2.png
 OUTPUT out/report3.dvi
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/jis/jis.tfm
 INPUT out/report3.aux
