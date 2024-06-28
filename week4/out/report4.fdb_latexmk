@@ -1,16 +1,17 @@
 # Fdb version 4
-["dvipdf"] 1715303136 "out/report4.dvi" "out/report4.pdf" "out/report4" 1715303136 0
-  "out/report4.dvi" 1715303136 6168 1c8e62958f5379024698a0287f8936d1 "latex"
+["dvipdf"] 1715580908 "out/report4.dvi" "out/report4.pdf" "out/report4" 1715580909 0
+  "out/report4.dvi" 1715580908 58084 f35c9914f5beb21ae1c67349764c94b5 "latex"
   (generated)
   "out/report4.pdf"
   (rewritten before read)
-["latex"] 1715303135 "/Users/davidleora/Projects/media-jouhou-programming-gengo-jikken/week4/report4.tex" "out/report4.dvi" "report4" 1715303136 0
-  "/Users/davidleora/Projects/media-jouhou-programming-gengo-jikken/week4/report4.tex" 1715303135 5043 424ad27d988c0065463c90de71116a63 ""
+["latex"] 1715580907 "/Users/davidleora/Projects/media-jouhou-programming-gengo-jikken/week4/report4.tex" "out/report4.dvi" "report4" 1715580909 0
+  "/Users/davidleora/Projects/media-jouhou-programming-gengo-jikken/week4/report4.tex" 1715580907 28160 2e5b4f330e0d002c680f1369e05a803e ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/jis/jis.tfm" 1463434352 468 53f854284f6afa6c36aaa2d1090ecc12 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/jis/jisg.tfm" 1463434352 468 53f854284f6afa6c36aaa2d1090ecc12 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/standard/tgoth10.tfm" 1463434352 856 7404843a5f798859944d7973a47821d5 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin10.tfm" 1463434352 856 39c171483fe1bb7d0e1368980c0c205b ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm" 1136768653 1512 f21f83efb36853c0b70002322c1ab3ad ""
@@ -19,6 +20,7 @@
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr17.tfm" 1136768653 1292 296a67155bdbfc32aa9c636f21e91433 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr6.tfm" 1136768653 1300 b62933e007d01cfd073f79b963c01526 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr8.tfm" 1136768653 1292 21c1c5bfeaebccffdb478fd231a0997d ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr9.tfm" 1136768653 1292 6b21b9c2c7bebb38aa2273f7ca0fb3af ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmss12.tfm" 1136768653 1324 37b971caf729d7edd9cbb9f9b0ea76eb ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1136768653 1124 6c73e740cf17375f03eec0ee63599741 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1136768653 1116 933a60c408fc0a863a92debe84b2d294 ""
@@ -26,6 +28,7 @@
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm" 1136768653 768 1321e9409b4137d6fb428ac9dc956269 ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/base/inputenc.sty" 1654720880 5048 84b05796b49b69e2d4257d537721c960 ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/comment/comment.sty" 1472166125 10197 204f75d5d8d88aa345a8c402e879e63b ""
+  "/usr/local/texlive/2023/texmf-dist/tex/latex/float/float.sty" 1137110151 6749 16d2656a1984957e674b149555f1ea1d ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/graphics.cfg" 1465944070 1224 978390e9c2234eab29404bc21b268d1e ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-def/dvipdfmx.def" 1663965824 12296 04d6453afafd99986deba3629756d9ec ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphics.sty" 1654720880 18387 8f900a490197ebaf93c02ae9476d4b09 ""
@@ -44,8 +47,15 @@
   "/usr/local/texlive/2023/texmf-dist/web2c/texmf.cnf" 1677365944 40745 87bb86a62d462f93a1efc6b0c65c872e ""
   "/usr/local/texlive/2023/texmf-var/web2c/eptex/platex.fmt" 1707965132 7883686 8a44d7f2e980ead229571286e8dd8e3d ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "out/report4.aux" 1715303136 51 5f379403364e13fd737952b790ec0a6d "latex"
-  "report4.tex" 1715303135 5043 424ad27d988c0065463c90de71116a63 ""
+  "kadai10pairfree.jpg" 1715483489 810266 95f3ac34434569d5eedeeafddf8af1ad ""
+  "kadai10sequence.jpg" 1715529769 802400 c9505785e2e79f78a9d1639f64609c57 ""
+  "kadai7kaidan.jpg" 1715426590 916676 345c4de9b14b33ec0b5b8356477fa2f7 ""
+  "kadai8kaidan2.jpg" 1715429754 949789 5783f5f9580bfa9ceeda947f9c32acf0 ""
+  "kadai8pair.jpg" 1714480804 810496 8168dceca2f957fbd3489d5987cd533f ""
+  "kadai9onzonpair.jpg" 1715431556 824049 436875ead67fc3af7556ba3f8573bce1 ""
+  "kadai9onzonpair2.jpg" 1715431945 898285 59c25d8fe5ed6cc6f435997dbf364c2c ""
+  "out/report4.aux" 1715580908 2855 674c15d41fd8b457ea8018262266b501 "latex"
+  "report4.tex" 1715580907 28160 2e5b4f330e0d002c680f1369e05a803e ""
   (generated)
   "out/report4.aux"
   "out/report4.dvi"

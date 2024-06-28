@@ -1,0 +1,21 @@
+%-----%hostname% a62
+%-----%TIME_START% 2024/04/23 14:26:11
+%-----%palyer_name% Normal Normal Normal Normal Normal
+%-----%WINDOW_TYPE% ALICE
+%-----%GRAPH_WINDOW% YES
+%-----%RAND_TYPE% 1
+%-----%RULE_KAKUMEI% YES
+%-----%RULE_SHIBARI% YES
+%-----%RULE_KINSOKU% NO
+%-----%RULE_KAIDAN% YES
+%-----%RULE_CHANGE% YES
+%-----%RULE_5TOBI% NO
+%-----%RULE_6REVERS% NO
+%-----%RULE_8GIRI% YES
+%-----%RULE_11BACK% NO
+%-----%RULE_SEKIGAE% YES
+%-----%RULE_SEKIGAE_NUM% 3
+%-----%GAME_NUMBER% 1500
+%-----%FLASH_MIBUN_NUMBER% 100
+%-----%GAME_PORT% 52745
+%-----%RANDOM_SEED% 1713849962

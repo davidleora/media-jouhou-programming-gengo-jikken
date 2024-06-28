@@ -165,6 +165,17 @@ INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/inputenc.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/inputenc.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/inputenc.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/inputenc.sty
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/float/float.sty
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/float/float.sty
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/float/float.sty
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/float/float.sty
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/float/float.sty
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/float/float.sty
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/float/float.sty
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/float/float.sty
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/float/float.sty
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/float/float.sty
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/float/float.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
@@ -206,10 +217,45 @@ INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/standard/tgoth10.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/jis/jisg.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmss12.tfm
-OUTPUT out/report4.dvi
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin10.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/jis/jis.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/standard/tgoth10.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/jis/jisg.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin10.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/jis/jis.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/standard/tgoth10.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/jis/jisg.tfm
+OUTPUT out/report4.dvi
+INPUT ./kadai7kaidan.jpg
+INPUT ./kadai7kaidan.jpg
+INPUT ./kadai7kaidan.jpg
+INPUT extractbb -B cropbox -O ./kadai7kaidan.jpg
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
+INPUT ./kadai8pair.jpg
+INPUT ./kadai8pair.jpg
+INPUT ./kadai8pair.jpg
+INPUT extractbb -B cropbox -O ./kadai8pair.jpg
+INPUT ./kadai8kaidan2.jpg
+INPUT ./kadai8kaidan2.jpg
+INPUT ./kadai8kaidan2.jpg
+INPUT extractbb -B cropbox -O ./kadai8kaidan2.jpg
+INPUT ./kadai9onzonpair.jpg
+INPUT ./kadai9onzonpair.jpg
+INPUT ./kadai9onzonpair.jpg
+INPUT extractbb -B cropbox -O ./kadai9onzonpair.jpg
+INPUT ./kadai9onzonpair2.jpg
+INPUT ./kadai9onzonpair2.jpg
+INPUT ./kadai9onzonpair2.jpg
+INPUT extractbb -B cropbox -O ./kadai9onzonpair2.jpg
+INPUT ./kadai10pairfree.jpg
+INPUT ./kadai10pairfree.jpg
+INPUT ./kadai10pairfree.jpg
+INPUT extractbb -B cropbox -O ./kadai10pairfree.jpg
+INPUT ./kadai10sequence.jpg
+INPUT ./kadai10sequence.jpg
+INPUT ./kadai10sequence.jpg
+INPUT extractbb -B cropbox -O ./kadai10sequence.jpg
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/jis/jis.tfm
 INPUT out/report4.aux
